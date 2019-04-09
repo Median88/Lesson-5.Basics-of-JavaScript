@@ -1,0 +1,25 @@
+(function($) {
+    $.fn.replaceTagName = function(replaceWith) {
+        var tags = [],
+            i    = this.length;
+        while (i--) {
+            var newElement = document.createElement(replaceWith),
+                thisi      = this[i],
+                thisia     = thisi.attributes;
+            for (var a = thisia.length - 1; a >= 0; a--) {
+                var attrib = thisia[a];
+                newElement.setAttribute(attrib.name, attrib.value);
+            };
+            newElement.innerHTML = thisi.innerHTML;
+            $(thisi).after(newElement).remove();
+            tags[i - 1] = newElement;
+        }
+        return $(tags);
+    };
+})(window.jQuery);
+
+$(function() {
+    $('#btnEdit').click(function() {
+        $('b').replaceTagName('h3')
+    });
+});

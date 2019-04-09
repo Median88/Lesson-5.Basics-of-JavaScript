@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Homework #2</title>
+    <style>
+        button {
+            width: 100px;
+            height: 50px;
+        }
+
+        #Hello {
+            display: none;
+        }
+    </style>
+    <script>
+        function viewButton() {
+            document.getElementById("Hello").style.display = "block";
+        };
+    </script>
+</head>
+
+<body>
+    <p>1. Есть кнопка button рядом с ней есть текст (Hello) необходимо
+        при нажатии на кнопку поменять текст кнопки на (Привет)</p>
+    <button value="Click" onmousedown="viewButton()">
+        <span id="Hello">Привет</span>
+    </button>
+    <span>Hello</span>
+</body>
+
+</html>
