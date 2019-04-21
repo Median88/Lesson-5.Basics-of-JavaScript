@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Homework #3</title>
+    <style>
+        button {
+            width: 120px;
+            height: 50px;
+            background-color: aqua;
+        }
+
+        #Hello {
+            display: none;
+        }
+    </style>
+    <script>
+        function task3_onclick() {
+            let ul = document.getElementById('task3');
+            let listElements = ul.getElementsByTagName('li');
+            for (let i = 0; i < listElements.length; i++) {
+                listElements[i].innerText = 'list ' + (i + 1);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h3>Задача #3</h3>
+    <p> Дан код<br>
+        &lt;h2&gt;Заголовок.&lt;/h2&gt;<br>
+        &lt;ul&gt;<br>
+        &lt;li>list&lt;/li&gt;<br>
+        &lt;li>list&lt;/li&gt;<br>
+        &lt;li>list&lt;/li&gt;<br>
+        &lt;li>list&lt;/li&gt;<br>
+        &lt;/ul&gt;<br>
+        Поменяйте содержимое списка на текст list и их порядковый номер в коде.</p>
+    <button type="button" onclick="task3_onclick()">Изменить представление</button>
+    <h2>Заголовок.</h2>
+    <ul id="task3">
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+        <li>list</li>
+    </ul>
+
+</body>
+
+</html>
