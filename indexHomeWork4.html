@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Homework #3</title>
+    <style>
+        button {
+            width: 25px;
+            height: 25px;
+            background-color: aqua;
+        }
+
+        #Hello {
+            display: none;
+        }
+    </style>
+    <script>
+        function taskFour_onclick(opType) {
+            let num1 = +document.getElementById('numberOne').value; //
+            let num2 = +document.getElementById('numberTwo').value; //
+            let res;
+            switch (opType) {
+                case 1:
+                    res = numberOne + numberTwo;
+                    break;
+                case 2:
+                    res = numberOne - numberTwo;
+                    break;
+                case 3:
+                    res = numberOne * numberTwo;
+                    break;
+                case 4:
+                    res = numberOne / numberTwo;
+                    break;
+            }
+            document.getElementById('res').innerText = res;
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Задача 4</h3>
+    <p>Создать калькулятор<br>
+        Есть 2 инпута и знак вопроса между ними дальше равенство и поле результата, в итоге должно получиться<br>
+        &lt;input type="text"&gt; &lt;span&gt;?&lt;/span&gt; &lt;input type="text"&gt; = &lt;span&gt;результат&lt;/span&gt;&lt;br&gt;<br>
+        &lt;button&gt;+&lt;/button&gt; // при нажатии необходимо сложить<br>
+        &lt;button&gt;-&lt;/button&gt; // при нажатии необходимо вычесть<br>
+        &lt;button&gt;&lt;/button&gt; // при нажатии необходимо умножить<br>
+        &lt;button&gt;/&lt;/button&gt; // при нажатии необходимо делить<br></p>
+    <input id="numberOne" type="text">
+    <span>?</span>
+    <input id="numberTwo" type="text"> = <span id="res"></span><br>
+    <button type="button" onclick="taskFour_onclick(1)">+</button>
+    <button type="button" onclick="taskFour_onclick(2)">-</button>
+    <button type="button" onclick="taskFour_onclick(3)">*</button>
+    <button type="button" onclick="taskFour_onclick(4)">/</button>
+</body>
+
+</html>
